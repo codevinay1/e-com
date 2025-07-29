@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA E-commerce</title>
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#3c3c3c"/>
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Google Fonts (Montserrat & Open Sans for modern look) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">E-Shop PWA</h1>
+            <nav class="nav">
+                <a href="#" class="nav-link active" data-section="products">Products</a>
+                <a href="#" class="nav-link" data-section="cart">Cart (<span id="cart-count">0</span>)</a>
+                <button id="notify-btn" class="button">Enable Notifications</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main container">
+        <!-- Products Section -->
+        <section id="products" class="section active">
+            <h2 class="section-title">Our Products</h2>
+            <div class="product-grid">
+                <!-- Product Cards will be loaded here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <section id="cart" class="section hidden">
+            <h2 class="section-title">Your Cart</h2>
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will be loaded here by JavaScript -->
+                <p id="empty-cart-message">Your cart is empty.</p>
+            </div>
+            <div class="cart-summary">
+                <p>Total: $<span id="cart-total">0.00</span></p>
+                <button class="button checkout-button">Checkout</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 PWA E-commerce. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
